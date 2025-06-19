@@ -13,7 +13,7 @@ Given Login saucedemo
     Input Text   css:[data-test="password"]    secret_sauce
     Click Button    css:[data-test="login-button"]
     Wait Until Page Contains Element    css=.inventory_list
-When User shopping cart checkout
+When User Add Product to Cart
     Click Button    css:[data-test="add-to-cart-sauce-labs-backpack"]
     Click Button    css:[data-test="add-to-cart-sauce-labs-bike-light"]
     Click Button    css:[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]

@@ -1,136 +1,532 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.12.10 on win32)" generated="2025-06-19T21:41:29.772604" rpa="false" schemaversion="5">
-<suite id="s1" name="Reqres Api" source="c:\Automation_Test\robot_framework\tests\api\reqres_api.robot">
-<test id="s1-t1" name="Get single user successfully" line="9">
-<kw name="Given API URL &amp; Header is set" owner="api_keywords">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-06-19T21:41:30.094728" level="INFO">Creating Session using : alias=get_user_api, url=https://reqres.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>get_user_api</arg>
-<arg>${API_URL}</arg>
-<arg>verify=${False}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-06-19T21:41:30.094728" elapsed="0.001999"/>
+<robot generator="Robot 7.3.1 (Python 3.12.10 on win32)" generated="2025-06-19T22:17:34.424707" rpa="false" schemaversion="5">
+<suite id="s1" name="Soucedemo" source="c:\Automation_Test\robot_framework\tests\web\soucedemo.robot">
+<test id="s1-t1" name="User can add items to shopping cart to checkout" line="5">
+<kw name="Given Login saucedemo" owner="web_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:34.760403" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-19T22:17:34.759374" elapsed="6.069216"/>
 </kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-06-19T21:41:30.097721" level="INFO">${headers} = {'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'}</msg>
-<var>${headers}</var>
-<arg>Content-Type=application/json</arg>
-<arg>x-api-key=reqres-free-v1</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.096727" elapsed="0.000994"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-19T22:17:40.830091" elapsed="0.127894"/>
 </kw>
-<kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-06-19T21:41:30.098226" level="INFO">${headers} = {'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'}</msg>
-<arg>${headers}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.098226" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:[data-test="username"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-19T22:17:40.957985" elapsed="0.118909"/>
 </kw>
-<doc>Set the API URL for the requests</doc>
-<status status="PASS" start="2025-06-19T21:41:30.094217" elapsed="0.004009"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:41.077889" level="INFO">Typing text 'standard_user' into text field 'css:[data-test="username"]'.</msg>
+<arg>css:[data-test="username"]</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:41.076894" elapsed="0.520505"/>
 </kw>
-<kw name="When User send request get single user with ID 2" owner="api_keywords">
-<kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2025-06-19T21:41:30.234610" level="INFO">GET Request : url=https://reqres.in/api/users/2 
- path_url=/api/users/2 
- headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'} 
- body=None 
- </msg>
-<msg time="2025-06-19T21:41:30.234610" level="INFO">GET Response : url=https://reqres.in/api/users/2 
- status=200, reason=OK 
- headers={'Date': 'Thu, 19 Jun 2025 14:41:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1750338082&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=SQmJhQ4MGMvqf9iV6%2FLDTBpmK0kpjmhLce%2BHt8v3t20%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1750338082&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=SQmJhQ4MGMvqf9iV6%2FLDTBpmK0kpjmhLce%2BHt8v3t20%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Limit': '100', 'Ratelimit-Remaining': '98', 'Ratelimit-Reset': '60', 'Etag': 'W/"152-ApQgGHL6RKwaebFlrPCYPBO1xHg"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'Cf-Cache-Status': 'HIT', 'Age': '6008', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'Cf-Ray': '9523c9a4ce1ecdda-SIN', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=22466&amp;min_rtt=22326&amp;rtt_var=8654&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2833&amp;recv_bytes=829&amp;delivery_rate=123822&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=f21253d17621cdcf&amp;ts=45&amp;x=0"'} 
- body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
- </msg>
-<msg time="2025-06-19T21:41:30.234610" level="INFO">C:\Automation_Test\robot_framework\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(</msg>
-<msg time="2025-06-19T21:41:30.235606" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>get_user_api</arg>
-<arg>/api/users/2</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.099233" elapsed="0.136373"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:41.598414" level="INFO">Typing text 'secret_sauce' into text field 'css:[data-test="password"]'.</msg>
+<arg>css:[data-test="password"]</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:41.597904" elapsed="0.271932"/>
 </kw>
-<kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-06-19T21:41:30.235606" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<arg>${response}</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.235606" elapsed="0.000997"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:41.871299" level="INFO">Clicking button 'css:[data-test="login-button"]'.</msg>
+<arg>css:[data-test="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:41.869836" elapsed="0.170188"/>
 </kw>
-<status status="PASS" start="2025-06-19T21:41:30.099233" elapsed="0.137370"/>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.inventory_list</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T22:17:42.041020" elapsed="0.039225"/>
 </kw>
-<kw name="Then response status code 200" owner="api_keywords">
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-06-19T21:41:30.238621" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>200</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.236603" elapsed="0.002018"/>
+<doc>Login to the Saucedemo application with provided username and password.</doc>
+<status status="PASS" start="2025-06-19T22:17:34.757856" elapsed="7.322389"/>
 </kw>
-<status status="PASS" start="2025-06-19T21:41:30.236603" elapsed="0.002018"/>
+<kw name="When User Add Product to Cart" owner="web_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:42.083834" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-backpack"]'.</msg>
+<arg>css:[data-test="add-to-cart-sauce-labs-backpack"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:42.082832" elapsed="0.234737"/>
 </kw>
-<kw name="And response should contain id, email, firts_name, last_name , avatar" owner="api_keywords">
-<kw name="To Json" owner="RequestsLibrary">
-<msg time="2025-06-19T21:41:30.240618" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
-<msg time="2025-06-19T21:41:30.241616" level="INFO">To JSON using : content={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} </msg>
-<msg time="2025-06-19T21:41:30.241616" level="INFO">To JSON using : pretty_print=False </msg>
-<msg time="2025-06-19T21:41:30.241616" level="INFO">${json} = {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?ut...</msg>
-<var>${json}</var>
-<arg>${response.content}</arg>
-<doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.240618" elapsed="0.001994"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:42.319073" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-bike-light"]'.</msg>
+<arg>css:[data-test="add-to-cart-sauce-labs-bike-light"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:42.317569" elapsed="0.073405"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:42.391477" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]'.</msg>
+<arg>css:[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:42.391477" elapsed="0.162155"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:42.554633" level="INFO">Clicking button 'css:[data-test="add-to-cart-sauce-labs-fleece-jacket"]'.</msg>
+<arg>css:[data-test="add-to-cart-sauce-labs-fleece-jacket"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:42.553632" elapsed="0.281670"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:42.836629" level="INFO">Clicking element 'css:[data-test="shopping-cart-link"]'.</msg>
+<arg>css:[data-test="shopping-cart-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:42.836629" elapsed="0.131938"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:42.081621" elapsed="0.887449"/>
+</kw>
+<kw name="Then User should be able to add items to the cart" owner="web_keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.012003" level="INFO">${prices} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d3e42e3640915675e21fcbb5c7d28629", element="f.04E98D7913376B372590802B4020574C.d.10226F07310CB7F858040387CFF4EF5B.e.49")&gt;, &lt;selenium.webdriv...</msg>
+<var>${prices}</var>
+<arg>css:[data-test="inventory-item-price"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:42.974054" elapsed="0.037949"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.038436" level="INFO">${qty} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d3e42e3640915675e21fcbb5c7d28629", element="f.04E98D7913376B372590802B4020574C.d.10226F07310CB7F858040387CFF4EF5B.e.53")&gt;, &lt;selenium.webdriv...</msg>
+<var>${qty}</var>
+<arg>css:[data-test="item-quantity"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.012003" elapsed="0.026433"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.039936" level="INFO">Verifying element 'css:[data-test="item-4-title-link"]' contains exact text 'Sauce Labs Backpack'.</msg>
+<arg>css:[data-test="item-4-title-link"]</arg>
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.039433" elapsed="0.037039"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.088909" level="INFO">${qty1} = 1</msg>
+<var>${qty1}</var>
+<arg>${qty[0]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.076472" elapsed="0.012437"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-06-19T21:41:30.242612" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${json['data']['id']}</arg>
-<arg>2</arg>
+<arg>${qty1}</arg>
+<arg>1</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.242612" elapsed="0.000000"/>
+<status status="PASS" start="2025-06-19T22:17:43.088909" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${json['data']['email']}</arg>
-<arg>janet.weaver@reqres.in</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.243608" elapsed="0.000000"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.100726" level="INFO">${price1} = $29.99</msg>
+<var>${price1}</var>
+<arg>${prices[0]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.089908" elapsed="0.010818"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${json['data']['first_name']}</arg>
-<arg>Janet</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.243608" elapsed="0.000996"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price1}</arg>
+<arg>$29.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.101410" elapsed="0.000502"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${json['data']['last_name']}</arg>
-<arg>Weaver</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.244604" elapsed="0.000000"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.101912" level="INFO">Verifying element 'css:[data-test="item-0-title-link"]' contains exact text 'Sauce Labs Bike Light'.</msg>
+<arg>css:[data-test="item-0-title-link"]</arg>
+<arg>Sauce Labs Bike Light</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.101912" elapsed="0.135607"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${json['data']['avatar']}</arg>
-<arg>https://reqres.in/img/faces/2-image.jpg</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.244604" elapsed="0.000997"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.249866" level="INFO">${qty2} = 1</msg>
+<var>${qty2}</var>
+<arg>${qty[1]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.238527" elapsed="0.011339"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${json['support']['url']}</arg>
-<arg>https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.245601" elapsed="0.000000"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qty2}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.249866" elapsed="0.000000"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${json['support']['text']}</arg>
-<arg>Tired of writing endless social media content? Let Content Caddy generate it for you.</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-06-19T21:41:30.246597" elapsed="0.000000"/>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.265686" level="INFO">${price2} = $9.99</msg>
+<var>${price2}</var>
+<arg>${prices[1]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.249866" elapsed="0.015820"/>
 </kw>
-<status status="PASS" start="2025-06-19T21:41:30.239621" elapsed="0.006976"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price2}</arg>
+<arg>$9.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.265686" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-06-19T21:41:30.092704" elapsed="0.154890"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.267259" level="INFO">Verifying element 'css:[data-test="item-1-title-link"]' contains exact text 'Sauce Labs Bolt T-Shirt'.</msg>
+<arg>css:[data-test="item-1-title-link"]</arg>
+<arg>Sauce Labs Bolt T-Shirt</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.267259" elapsed="0.024035"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.304326" level="INFO">${qty3} = 1</msg>
+<var>${qty3}</var>
+<arg>${qty[2]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.292734" elapsed="0.011592"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qty3}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.304326" elapsed="0.001213"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.321394" level="INFO">${price3} = $15.99</msg>
+<var>${price3}</var>
+<arg>${prices[2]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.305539" elapsed="0.015855"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price3}</arg>
+<arg>$15.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.322520" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.323699" level="INFO">Verifying element 'css:[data-test="item-5-title-link"]' contains exact text 'Sauce Labs Fleece Jacket'.</msg>
+<arg>css:[data-test="item-5-title-link"]</arg>
+<arg>Sauce Labs Fleece Jacket</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.322520" elapsed="0.031123"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.367537" level="INFO">${qty4} = 1</msg>
+<var>${qty4}</var>
+<arg>${qty[3]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.354683" elapsed="0.012854"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qty4}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.367537" elapsed="0.001007"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.382462" level="INFO">${price4} = $49.99</msg>
+<var>${price4}</var>
+<arg>${prices[3]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.368544" elapsed="0.014918"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price4}</arg>
+<arg>$49.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.383462" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:42.974054" elapsed="0.409408"/>
+</kw>
+<kw name="When User checkout" owner="web_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.385751" level="INFO">Clicking button 'css:[data-test="checkout"]'.</msg>
+<arg>css:[data-test="checkout"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.384459" elapsed="0.132711"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:43.384459" elapsed="0.132711"/>
+</kw>
+<kw name="And User fill checkout information" owner="web_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.519651" level="INFO">Typing text 'Irman' into text field 'css:[data-test="firstName"]'.</msg>
+<arg>css:[data-test="firstName"]</arg>
+<arg>Irman</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.519651" elapsed="0.113804"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.634927" level="INFO">Typing text 'Ramadhan' into text field 'css:[data-test="lastName"]'.</msg>
+<arg>css:[data-test="lastName"]</arg>
+<arg>Ramadhan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.634927" elapsed="0.084083"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.720246" level="INFO">Typing text '007007' into text field 'css:[data-test="postalCode"]'.</msg>
+<arg>css:[data-test="postalCode"]</arg>
+<arg>007007</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.720246" elapsed="0.066628"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:43.518631" elapsed="0.268243"/>
+</kw>
+<kw name="And User click continue" owner="web_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.789688" level="INFO">Clicking button 'css:[data-test="continue"]'.</msg>
+<arg>css:[data-test="continue"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.788543" elapsed="0.136450"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:43.788543" elapsed="0.137845"/>
+</kw>
+<kw name="Then User should see checkout overview" owner="web_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:[data-test="title"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.927913" elapsed="0.013934"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.941847" level="INFO">Verifying element 'css:[data-test="title"]' contains exact text 'Checkout: Overview'.</msg>
+<arg>css:[data-test="title"]</arg>
+<arg>Checkout: Overview</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.941847" elapsed="0.025686"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.980737" level="INFO">${prices} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d3e42e3640915675e21fcbb5c7d28629", element="f.04E98D7913376B372590802B4020574C.d.10226F07310CB7F858040387CFF4EF5B.e.78")&gt;, &lt;selenium.webdriv...</msg>
+<var>${prices}</var>
+<arg>css:[data-test="inventory-item-price"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.967533" elapsed="0.013896"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.993213" level="INFO">${qty} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="d3e42e3640915675e21fcbb5c7d28629", element="f.04E98D7913376B372590802B4020574C.d.10226F07310CB7F858040387CFF4EF5B.e.82")&gt;, &lt;selenium.webdriv...</msg>
+<var>${qty}</var>
+<arg>css:[data-test="item-quantity"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.982178" elapsed="0.011035"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:43.994579" level="INFO">Verifying element 'css:[data-test="item-4-title-link"]' contains exact text 'Sauce Labs Backpack'.</msg>
+<arg>css:[data-test="item-4-title-link"]</arg>
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:43.994579" elapsed="0.021196"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.027132" level="INFO">${qty1} = 1</msg>
+<var>${qty1}</var>
+<arg>${qty[0]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.015775" elapsed="0.011357"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qty1}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.027132" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.039633" level="INFO">${price1} = $29.99</msg>
+<var>${price1}</var>
+<arg>${prices[0]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.028548" elapsed="0.011085"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price1}</arg>
+<arg>$29.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.039633" elapsed="0.001366"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.041504" level="INFO">Verifying element 'css:[data-test="item-0-title-link"]' contains exact text 'Sauce Labs Bike Light'.</msg>
+<arg>css:[data-test="item-0-title-link"]</arg>
+<arg>Sauce Labs Bike Light</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.040999" elapsed="0.115622"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.191414" level="INFO">${qty2} = 1</msg>
+<var>${qty2}</var>
+<arg>${qty[1]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.156621" elapsed="0.034793"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qty2}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.191414" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.202955" level="INFO">${price2} = $9.99</msg>
+<var>${price2}</var>
+<arg>${prices[1]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.192703" elapsed="0.011747"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price2}</arg>
+<arg>$9.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.204450" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.204450" level="INFO">Verifying element 'css:[data-test="item-1-title-link"]' contains exact text 'Sauce Labs Bolt T-Shirt'.</msg>
+<arg>css:[data-test="item-1-title-link"]</arg>
+<arg>Sauce Labs Bolt T-Shirt</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.204450" elapsed="0.019868"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.235737" level="INFO">${qty3} = 1</msg>
+<var>${qty3}</var>
+<arg>${qty[2]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.224318" elapsed="0.011419"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qty3}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.235737" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.249441" level="INFO">${price3} = $15.99</msg>
+<var>${price3}</var>
+<arg>${prices[2]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.237300" elapsed="0.012141"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price3}</arg>
+<arg>$15.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.249441" elapsed="0.000997"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.250438" level="INFO">Verifying element 'css:[data-test="item-5-title-link"]' contains exact text 'Sauce Labs Fleece Jacket'.</msg>
+<arg>css:[data-test="item-5-title-link"]</arg>
+<arg>Sauce Labs Fleece Jacket</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.250438" elapsed="0.042831"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.306556" level="INFO">${qty4} = 1</msg>
+<var>${qty4}</var>
+<arg>${qty[3]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.294266" elapsed="0.012290"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${qty4}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.307956" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.331029" level="INFO">${price4} = $49.99</msg>
+<var>${price4}</var>
+<arg>${prices[3]}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.308460" elapsed="0.023566"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${price4}</arg>
+<arg>$49.99</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.332026" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.332026" level="INFO">Verifying element 'css:[data-test="payment-info-label"]' contains exact text 'Payment Information:'.</msg>
+<arg>css:[data-test="payment-info-label"]</arg>
+<arg>Payment Information:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.332026" elapsed="0.019079"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.352243" level="INFO">Verifying element 'css:[data-test="payment-info-value"]' contains exact text 'SauceCard #31337'.</msg>
+<arg>css:[data-test="payment-info-value"]</arg>
+<arg>SauceCard #31337</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.351742" elapsed="0.015267"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.515062" level="INFO">Verifying element 'css:[data-test="shipping-info-label"]' contains exact text 'Shipping Information:'.</msg>
+<arg>css:[data-test="shipping-info-label"]</arg>
+<arg>Shipping Information:</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.367009" elapsed="0.160212"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.528284" level="INFO">Verifying element 'css:[data-test="shipping-info-value"]' contains exact text 'Free Pony Express Delivery!'.</msg>
+<arg>css:[data-test="shipping-info-value"]</arg>
+<arg>Free Pony Express Delivery!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.528284" elapsed="0.016119"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.545782" level="INFO">Verifying element 'css:[data-test="total-info-label"]' contains exact text 'Price Total'.</msg>
+<arg>css:[data-test="total-info-label"]</arg>
+<arg>Price Total</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.544403" elapsed="0.024913"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.569825" level="INFO">Verifying element 'css:[data-test="subtotal-label"]' contains exact text 'Item total: $105.96000000000001'.</msg>
+<arg>css:[data-test="subtotal-label"]</arg>
+<arg>Item total: $105.96000000000001</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.569825" elapsed="0.023056"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.592881" level="INFO">Verifying element 'css:[data-test="tax-label"]' contains exact text 'Tax: $8.48'.</msg>
+<arg>css:[data-test="tax-label"]</arg>
+<arg>Tax: $8.48</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.592881" elapsed="0.020462"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.614825" level="INFO">Verifying element 'css:[data-test="total-label"]' contains exact text 'Total: $114.44'.</msg>
+<arg>css:[data-test="total-label"]</arg>
+<arg>Total: $114.44</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.613343" elapsed="0.014752"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:43.927392" elapsed="0.700703"/>
+</kw>
+<kw name="When User click finish" owner="web_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.629142" level="INFO">Clicking button 'css:[data-test="finish"]'.</msg>
+<arg>css:[data-test="finish"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.629142" elapsed="0.153715"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:44.628095" elapsed="0.155552"/>
+</kw>
+<kw name="Then User should see checkout complete" owner="web_keywords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.784648" level="INFO">Verifying element 'css:[data-test="title"]' contains exact text 'Checkout: Complete!'.</msg>
+<arg>css:[data-test="title"]</arg>
+<arg>Checkout: Complete!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.784648" elapsed="0.014435"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.799083" level="INFO">Verifying element 'css:[data-test="complete-header"]' contains exact text 'Thank you for your order!'.</msg>
+<arg>css:[data-test="complete-header"]</arg>
+<arg>Thank you for your order!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.799083" elapsed="0.014459"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-19T22:17:44.815045" level="INFO">Verifying element 'css:[data-test="complete-text"]' contains exact text 'Your order has been dispatched, and will arrive just as fast as the pony can get there!'.</msg>
+<arg>css:[data-test="complete-text"]</arg>
+<arg>Your order has been dispatched, and will arrive just as fast as the pony can get there!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-19T22:17:44.813542" elapsed="0.023473"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:44.784648" elapsed="0.052367"/>
+</kw>
+<status status="PASS" start="2025-06-19T22:17:34.756182" elapsed="10.083306"/>
 </test>
-<status status="PASS" start="2025-06-19T21:41:29.777587" elapsed="0.470007"/>
+<status status="PASS" start="2025-06-19T22:17:34.433744" elapsed="10.408911"/>
 </suite>
 <statistics>
 <total>
@@ -139,10 +535,9 @@
 <tag>
 </tag>
 <suite>
-<stat name="Reqres Api" id="s1" pass="1" fail="0" skip="0">Reqres Api</stat>
+<stat name="Soucedemo" id="s1" pass="1" fail="0" skip="0">Soucedemo</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-06-19T21:41:30.240618" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
 </errors>
 </robot>
