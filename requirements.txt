@@ -1,0 +1,21 @@
+# Core Robot Framework
+robotframework>=6.0.0
+
+# API Testing
+requests>=2.31.0
+robotframework-requests>=0.9.5
+
+# Web Testing (Selenium)
+robotframework-seleniumlibrary>=6.0.0
+
+# Mobile Testing (Appium)
+robotframework-appiumlibrary>=2.0.0
+
+# Optional: BDD-style Gherkin support
+robotframework-cucumberlibrary>=1.2.0
+
+# Optional: Environment variable support
+robotframework-dotenv>=0.2.0
+
+# Optional: Logging & reporting enhancements
+robotframework-robocop

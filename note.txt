@@ -1,0 +1,19 @@
+Assertion by element
+
+| Keyword                           | Keterangan                   | Contoh                                                        |
+| --------------------------------- | ---------------------------- | ------------------------------------------------------------- |
+| `Element Should Be Visible`       | Pastikan elemen tampil       | `Element Should Be Visible    id=user-name`                   |
+| `Element Should Not Be Visible`   | Pastikan elemen tidak tampil | `Element Should Not Be Visible    css:.error`                 |
+| `Element Should Be Enabled`       | Pastikan bisa diklik/input   | `Element Should Be Enabled    xpath=//button[@id='submit']`   |
+| `Element Should Be Disabled`      | Pastikan elemen disabled     | `Element Should Be Disabled    name=next`                     |
+| `Page Should Contain Element`     | Cek elemen ada di DOM        | `Page Should Contain Element    css:.inventory_item`          |
+| `Page Should Not Contain Element` | Pastikan elemen tidak ada    | `Page Should Not Contain Element    xpath=//div[@id='popup']` |
+
+
+Assertion by Text from Element
+| Keyword                       | Keterangan                      | Contoh                                                   |
+| ----------------------------- | ------------------------------- | -------------------------------------------------------- |
+| `Element Text Should Be`      | Cocokkan isi teks elemen        | `Element Text Should Be    id=title    Products`         |
+| `Element Text Should Contain` | Pastikan teks mengandung string | `Element Text Should Contain    css:.message    Welcome` |
+| `Page Should Contain`         | Cek string muncul di halaman    | `Page Should Contain    Invalid username`                |
+| `Page Should Not Contain`     | Pastikan string tidak muncul    | `Page Should Not Contain    Error`                       |

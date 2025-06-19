@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.12.10 on win32)" generated="2025-06-19T21:41:29.772604" rpa="false" schemaversion="5">
+<suite id="s1" name="Reqres Api" source="c:\Automation_Test\robot_framework\tests\api\reqres_api.robot">
+<test id="s1-t1" name="Get single user successfully" line="9">
+<kw name="Given API URL &amp; Header is set" owner="api_keywords">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-06-19T21:41:30.094728" level="INFO">Creating Session using : alias=get_user_api, url=https://reqres.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>get_user_api</arg>
+<arg>${API_URL}</arg>
+<arg>verify=${False}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-06-19T21:41:30.094728" elapsed="0.001999"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-06-19T21:41:30.097721" level="INFO">${headers} = {'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<arg>x-api-key=reqres-free-v1</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.096727" elapsed="0.000994"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-19T21:41:30.098226" level="INFO">${headers} = {'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'}</msg>
+<arg>${headers}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.098226" elapsed="0.000000"/>
+</kw>
+<doc>Set the API URL for the requests</doc>
+<status status="PASS" start="2025-06-19T21:41:30.094217" elapsed="0.004009"/>
+</kw>
+<kw name="When User send request get single user with ID 2" owner="api_keywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-06-19T21:41:30.234610" level="INFO">GET Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'x-api-key': 'reqres-free-v1'} 
+ body=None 
+ </msg>
+<msg time="2025-06-19T21:41:30.234610" level="INFO">GET Response : url=https://reqres.in/api/users/2 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 19 Jun 2025 14:41:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Encoding': 'gzip', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1750338082&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=SQmJhQ4MGMvqf9iV6%2FLDTBpmK0kpjmhLce%2BHt8v3t20%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1750338082&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=SQmJhQ4MGMvqf9iV6%2FLDTBpmK0kpjmhLce%2BHt8v3t20%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Limit': '100', 'Ratelimit-Remaining': '98', 'Ratelimit-Reset': '60', 'Etag': 'W/"152-ApQgGHL6RKwaebFlrPCYPBO1xHg"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'Cf-Cache-Status': 'HIT', 'Age': '6008', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'Cf-Ray': '9523c9a4ce1ecdda-SIN', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=22466&amp;min_rtt=22326&amp;rtt_var=8654&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2833&amp;recv_bytes=829&amp;delivery_rate=123822&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=f21253d17621cdcf&amp;ts=45&amp;x=0"'} 
+ body={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} 
+ </msg>
+<msg time="2025-06-19T21:41:30.234610" level="INFO">C:\Automation_Test\robot_framework\venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-06-19T21:41:30.235606" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>get_user_api</arg>
+<arg>/api/users/2</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.099233" elapsed="0.136373"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-06-19T21:41:30.235606" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.235606" elapsed="0.000997"/>
+</kw>
+<status status="PASS" start="2025-06-19T21:41:30.099233" elapsed="0.137370"/>
+</kw>
+<kw name="Then response status code 200" owner="api_keywords">
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-06-19T21:41:30.238621" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.236603" elapsed="0.002018"/>
+</kw>
+<status status="PASS" start="2025-06-19T21:41:30.236603" elapsed="0.002018"/>
+</kw>
+<kw name="And response should contain id, email, firts_name, last_name , avatar" owner="api_keywords">
+<kw name="To Json" owner="RequestsLibrary">
+<msg time="2025-06-19T21:41:30.240618" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg time="2025-06-19T21:41:30.241616" level="INFO">To JSON using : content={"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}} </msg>
+<msg time="2025-06-19T21:41:30.241616" level="INFO">To JSON using : pretty_print=False </msg>
+<msg time="2025-06-19T21:41:30.241616" level="INFO">${json} = {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?ut...</msg>
+<var>${json}</var>
+<arg>${response.content}</arg>
+<doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.240618" elapsed="0.001994"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-06-19T21:41:30.242612" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${json['data']['id']}</arg>
+<arg>2</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.242612" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['data']['email']}</arg>
+<arg>janet.weaver@reqres.in</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.243608" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['data']['first_name']}</arg>
+<arg>Janet</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.243608" elapsed="0.000996"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['data']['last_name']}</arg>
+<arg>Weaver</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.244604" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['data']['avatar']}</arg>
+<arg>https://reqres.in/img/faces/2-image.jpg</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.244604" elapsed="0.000997"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['support']['url']}</arg>
+<arg>https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.245601" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${json['support']['text']}</arg>
+<arg>Tired of writing endless social media content? Let Content Caddy generate it for you.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-06-19T21:41:30.246597" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-19T21:41:30.239621" elapsed="0.006976"/>
+</kw>
+<status status="PASS" start="2025-06-19T21:41:30.092704" elapsed="0.154890"/>
+</test>
+<status status="PASS" start="2025-06-19T21:41:29.777587" elapsed="0.470007"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Reqres Api" id="s1" pass="1" fail="0" skip="0">Reqres Api</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-19T21:41:30.240618" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+</errors>
+</robot>
