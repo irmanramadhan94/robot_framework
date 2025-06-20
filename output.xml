@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.1 (Python 3.12.10 on win32)" generated="2025-06-20T15:30:15.602564" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.1 (Python 3.12.10 on win32)" generated="2025-06-20T15:45:57.238907" rpa="false" schemaversion="5">
 <suite id="s1" name="Lionparcel App" source="C:\Automation_Test\robot_framework\tests\mobile\lionparcel_app.robot">
 <test id="s1-t1" name="User Can Cek Tarif" line="5">
 <kw name="Given Open LionParcel App" owner="android_keywords">
@@ -18,182 +18,182 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-06-20T15:30:16.073281" elapsed="7.586280"/>
+<status status="PASS" start="2025-06-20T15:45:57.762611" elapsed="8.756542"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-20T15:30:26.660963" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-06-20T15:46:09.520481" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-20T15:30:23.659561" elapsed="3.001402"/>
+<status status="PASS" start="2025-06-20T15:46:06.520158" elapsed="3.000323"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:16.072682" elapsed="10.588801"/>
+<status status="PASS" start="2025-06-20T15:45:57.762337" elapsed="11.758144"/>
 </kw>
 <kw name="And Tap Cek Tarif Button" owner="android_keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().text("Cek Tarif")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:26.662482" elapsed="0.556404"/>
+<status status="PASS" start="2025-06-20T15:46:09.521070" elapsed="0.160992"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:27.219946" level="INFO">Clicking element 'android=new UiSelector().text("Cek Tarif")'.</msg>
+<msg time="2025-06-20T15:46:09.682062" level="INFO">Clicking element 'android=new UiSelector().text("Cek Tarif")'.</msg>
 <arg>android=new UiSelector().text("Cek Tarif")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:27.218886" elapsed="0.283131"/>
+<status status="PASS" start="2025-06-20T15:46:09.682062" elapsed="0.219088"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:26.661483" elapsed="0.841037"/>
+<status status="PASS" start="2025-06-20T15:46:09.521070" elapsed="0.380080"/>
 </kw>
 <kw name="When User Input Origin address" owner="android_keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")</arg>
 <arg>15s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:27.503526" elapsed="5.411749"/>
+<status status="PASS" start="2025-06-20T15:46:09.904161" elapsed="2.828023"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:32.916277" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")'.</msg>
+<msg time="2025-06-20T15:46:12.734745" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")'.</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:32.915275" elapsed="0.183806"/>
+<status status="PASS" start="2025-06-20T15:46:12.733684" elapsed="0.167758"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:33.099081" elapsed="1.511511"/>
+<status status="PASS" start="2025-06-20T15:46:12.901442" elapsed="1.436136"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:34.612593" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'.</msg>
+<msg time="2025-06-20T15:46:14.339027" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'.</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:34.610592" elapsed="0.610375"/>
+<status status="PASS" start="2025-06-20T15:46:14.337578" elapsed="0.593255"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:35.222497" level="INFO">Typing text 'ciawi' into text field 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'</msg>
+<msg time="2025-06-20T15:46:14.932613" level="INFO">Typing text 'ciawi' into text field 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <arg>ciawi</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:35.221474" elapsed="1.760129"/>
+<status status="PASS" start="2025-06-20T15:46:14.931337" elapsed="1.594188"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().text("Ciawi, Bogor (BGR)")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:36.981603" elapsed="1.010944"/>
+<status status="PASS" start="2025-06-20T15:46:16.526525" elapsed="1.030015"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:37.993566" level="INFO">Clicking element 'android=new UiSelector().text("Ciawi, Bogor (BGR)")'.</msg>
+<msg time="2025-06-20T15:46:17.558045" level="INFO">Clicking element 'android=new UiSelector().text("Ciawi, Bogor (BGR)")'.</msg>
 <arg>android=new UiSelector().text("Ciawi, Bogor (BGR)")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:37.992547" elapsed="0.173215"/>
+<status status="PASS" start="2025-06-20T15:46:17.556540" elapsed="1.417480"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:27.502520" elapsed="10.663242"/>
+<status status="PASS" start="2025-06-20T15:46:09.904161" elapsed="9.069859"/>
 </kw>
 <kw name="And User Input Destination address" owner="android_keywords">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:38.168580" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtDestinationAddress")'.</msg>
+<msg time="2025-06-20T15:46:18.976653" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtDestinationAddress")'.</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtDestinationAddress")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:38.167755" elapsed="2.902296"/>
+<status status="PASS" start="2025-06-20T15:46:18.975525" elapsed="0.179432"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:41.070051" elapsed="0.107173"/>
+<status status="PASS" start="2025-06-20T15:46:19.154957" elapsed="1.533732"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:41.178732" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'.</msg>
+<msg time="2025-06-20T15:46:20.690200" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'.</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:41.177224" elapsed="0.188023"/>
+<status status="PASS" start="2025-06-20T15:46:20.688689" elapsed="0.153081"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:41.366847" level="INFO">Typing text 'jakarta' into text field 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'</msg>
+<msg time="2025-06-20T15:46:20.844820" level="INFO">Typing text 'jakarta' into text field 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <arg>jakarta</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:41.365247" elapsed="0.722233"/>
+<status status="PASS" start="2025-06-20T15:46:20.841770" elapsed="2.088559"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().text("Cakung")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:42.087995" elapsed="1.107813"/>
+<status status="PASS" start="2025-06-20T15:46:22.930329" elapsed="0.850721"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:43.197319" level="INFO">Clicking element 'android=new UiSelector().text("Cakung")'.</msg>
+<msg time="2025-06-20T15:46:23.781557" level="INFO">Clicking element 'android=new UiSelector().text("Cakung")'.</msg>
 <arg>android=new UiSelector().text("Cakung")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:43.195808" elapsed="0.161721"/>
+<status status="PASS" start="2025-06-20T15:46:23.781050" elapsed="0.149449"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/btnCheckTariff")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:43.358537" elapsed="1.393779"/>
+<status status="PASS" start="2025-06-20T15:46:23.931503" elapsed="1.490354"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:44.753818" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/btnCheckTariff")'.</msg>
+<msg time="2025-06-20T15:46:25.423857" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/btnCheckTariff")'.</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/btnCheckTariff")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:30:44.752316" elapsed="0.761531"/>
+<status status="PASS" start="2025-06-20T15:46:25.421857" elapsed="0.746228"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:38.167755" elapsed="7.346092"/>
+<status status="PASS" start="2025-06-20T15:46:18.975021" elapsed="7.193064"/>
 </kw>
 <kw name="Then User should see the list of available shipping services like BUSSPACK" owner="android_keywords">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().text("1 Hari")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:30:45.514850" elapsed="0.830448"/>
+<status status="PASS" start="2025-06-20T15:46:26.168085" elapsed="1.783484"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:46.346310" level="INFO">Verifying element 'android=new UiSelector().text("1 Hari")' contains text '1 Hari'.</msg>
+<msg time="2025-06-20T15:46:27.952681" level="INFO">Verifying element 'android=new UiSelector().text("1 Hari")' contains text '1 Hari'.</msg>
 <arg>android=new UiSelector().text("1 Hari")</arg>
 <arg>1 Hari</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:46.345804" elapsed="0.124759"/>
+<status status="PASS" start="2025-06-20T15:46:27.951569" elapsed="0.071433"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:46.472268" level="INFO">Verifying element 'android=new UiSelector().text("Lebih cuan! Dapat 2x Parcel Poin!")' contains text 'Lebih cuan! Dapat 2x Parcel Poin!'.</msg>
+<msg time="2025-06-20T15:46:28.024512" level="INFO">Verifying element 'android=new UiSelector().text("Lebih cuan! Dapat 2x Parcel Poin!")' contains text 'Lebih cuan! Dapat 2x Parcel Poin!'.</msg>
 <arg>android=new UiSelector().text("Lebih cuan! Dapat 2x Parcel Poin!")</arg>
 <arg>Lebih cuan! Dapat 2x Parcel Poin!</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:46.470563" elapsed="0.140974"/>
+<status status="PASS" start="2025-06-20T15:46:28.023505" elapsed="0.088837"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:46.613038" level="INFO">Verifying element 'android=new UiSelector().text("Rp11.000").instance(0)' contains text 'Rp11.000'.</msg>
+<msg time="2025-06-20T15:46:28.114352" level="INFO">Verifying element 'android=new UiSelector().text("Rp11.000").instance(0)' contains text 'Rp11.000'.</msg>
 <arg>android=new UiSelector().text("Rp11.000").instance(0)</arg>
 <arg>Rp11.000</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:46.611537" elapsed="0.066703"/>
+<status status="PASS" start="2025-06-20T15:46:28.113343" elapsed="0.079925"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:45.514850" elapsed="1.163390"/>
+<status status="PASS" start="2025-06-20T15:46:26.168085" elapsed="2.025183"/>
 </kw>
 <kw name="And User see shipping services JUMBOPACK" owner="android_keywords">
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:46.680202" level="INFO">Verifying element 'android=new UiSelector().text("3-4 Hari").instance(0)' contains text '3-4 Hari'.</msg>
+<msg time="2025-06-20T15:46:28.195625" level="INFO">Verifying element 'android=new UiSelector().text("3-4 Hari").instance(0)' contains text '3-4 Hari'.</msg>
 <arg>android=new UiSelector().text("3-4 Hari").instance(0)</arg>
 <arg>3-4 Hari</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:46.679020" elapsed="0.086113"/>
+<status status="PASS" start="2025-06-20T15:46:28.194626" elapsed="0.075067"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:46.766644" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman paket jumbo mulai 30 kg")' contains text 'Pengiriman paket jumbo mulai 30 kg'.</msg>
+<msg time="2025-06-20T15:46:28.269693" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman paket jumbo mulai 30 kg")' contains text 'Pengiriman paket jumbo mulai 30 kg'.</msg>
 <arg>android=new UiSelector().text("Pengiriman paket jumbo mulai 30 kg")</arg>
 <arg>Pengiriman paket jumbo mulai 30 kg</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:46.765133" elapsed="0.097180"/>
+<status status="PASS" start="2025-06-20T15:46:28.269693" elapsed="0.073204"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:46.862827" level="INFO">Verifying element 'android=new UiSelector().text("Rp78.000")' contains text 'Rp78.000'.</msg>
+<msg time="2025-06-20T15:46:28.344994" level="INFO">Verifying element 'android=new UiSelector().text("Rp78.000")' contains text 'Rp78.000'.</msg>
 <arg>android=new UiSelector().text("Rp78.000")</arg>
 <arg>Rp78.000</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:46.862827" elapsed="0.094595"/>
+<status status="PASS" start="2025-06-20T15:46:28.343988" elapsed="0.096346"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:46.679020" elapsed="0.278402"/>
+<status status="PASS" start="2025-06-20T15:46:28.194626" elapsed="0.245708"/>
 </kw>
 <kw name="and User see shipping services REGPACK" owner="android_keywords">
 <kw name="Swipe" owner="AppiumLibrary">
@@ -203,128 +203,128 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 <arg>400</arg>
 <arg>1000</arg>
 <doc>Swipe from one point to another point, for an optional duration.</doc>
-<status status="PASS" start="2025-06-20T15:30:46.958430" elapsed="1.320129"/>
+<status status="PASS" start="2025-06-20T15:46:28.441330" elapsed="1.306294"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:48.279556" level="INFO">Verifying element 'android=new UiSelector().text("1-2 Hari")' contains text '1-2 Hari'.</msg>
+<msg time="2025-06-20T15:46:29.749513" level="INFO">Verifying element 'android=new UiSelector().text("1-2 Hari")' contains text '1-2 Hari'.</msg>
 <arg>android=new UiSelector().text("1-2 Hari")</arg>
 <arg>1-2 Hari</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:48.278559" elapsed="0.884968"/>
+<status status="PASS" start="2025-06-20T15:46:29.747624" elapsed="0.911001"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.164871" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman reguler")' contains text 'Pengiriman reguler'.</msg>
+<msg time="2025-06-20T15:46:30.659624" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman reguler")' contains text 'Pengiriman reguler'.</msg>
 <arg>android=new UiSelector().text("Pengiriman reguler")</arg>
 <arg>Pengiriman reguler</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.163527" elapsed="0.096194"/>
+<status status="PASS" start="2025-06-20T15:46:30.658625" elapsed="0.126875"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.262246" level="INFO">Verifying element 'android=new UiSelector().text("Rp8.000")' contains text 'Rp8.000'.</msg>
+<msg time="2025-06-20T15:46:30.786576" level="INFO">Verifying element 'android=new UiSelector().text("Rp8.000")' contains text 'Rp8.000'.</msg>
 <arg>android=new UiSelector().text("Rp8.000")</arg>
 <arg>Rp8.000</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.259721" elapsed="0.085999"/>
+<status status="PASS" start="2025-06-20T15:46:30.785500" elapsed="0.086763"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:46.958430" elapsed="2.387290"/>
+<status status="PASS" start="2025-06-20T15:46:28.440334" elapsed="2.432926"/>
 </kw>
 <kw name="and User see shipping services JAGOPACK" owner="android_keywords">
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.348112" level="INFO">Verifying element 'android=new UiSelector().text("1-4 Hari")' contains text '1-4 Hari'.</msg>
+<msg time="2025-06-20T15:46:30.874438" level="INFO">Verifying element 'android=new UiSelector().text("1-4 Hari")' contains text '1-4 Hari'.</msg>
 <arg>android=new UiSelector().text("1-4 Hari")</arg>
 <arg>1-4 Hari</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.346852" elapsed="0.099046"/>
+<status status="PASS" start="2025-06-20T15:46:30.873260" elapsed="0.092754"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.447327" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman termurah")' contains text 'Pengiriman termurah'.</msg>
+<msg time="2025-06-20T15:46:30.968027" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman termurah")' contains text 'Pengiriman termurah'.</msg>
 <arg>android=new UiSelector().text("Pengiriman termurah")</arg>
 <arg>Pengiriman termurah</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.445898" elapsed="0.091140"/>
+<status status="PASS" start="2025-06-20T15:46:30.966014" elapsed="0.084520"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.539042" level="INFO">Verifying element 'android=new UiSelector().text("Rp7.500")' contains text 'Rp7.500'.</msg>
+<msg time="2025-06-20T15:46:31.052043" level="INFO">Verifying element 'android=new UiSelector().text("Rp7.500")' contains text 'Rp7.500'.</msg>
 <arg>android=new UiSelector().text("Rp7.500")</arg>
 <arg>Rp7.500</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.538041" elapsed="0.095474"/>
+<status status="PASS" start="2025-06-20T15:46:31.050534" elapsed="0.089631"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:49.346852" elapsed="0.287718"/>
+<status status="PASS" start="2025-06-20T15:46:30.873260" elapsed="0.266905"/>
 </kw>
 <kw name="and User see shipping services BIGPACK" owner="android_keywords">
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.635612" level="INFO">Verifying element 'android=new UiSelector().text("3-4 Hari").instance(1)' contains text '3-4 Hari'.</msg>
+<msg time="2025-06-20T15:46:31.141709" level="INFO">Verifying element 'android=new UiSelector().text("3-4 Hari").instance(1)' contains text '3-4 Hari'.</msg>
 <arg>android=new UiSelector().text("3-4 Hari").instance(1)</arg>
 <arg>3-4 Hari</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.634570" elapsed="0.075048"/>
+<status status="PASS" start="2025-06-20T15:46:31.140165" elapsed="0.070505"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.711614" level="INFO">Verifying element 'android=new UiSelector().text("Kirim paket hemat mulai dari 10kg")' contains text 'Kirim paket hemat mulai dari 10kg'.</msg>
+<msg time="2025-06-20T15:46:31.212190" level="INFO">Verifying element 'android=new UiSelector().text("Kirim paket hemat mulai dari 10kg")' contains text 'Kirim paket hemat mulai dari 10kg'.</msg>
 <arg>android=new UiSelector().text("Kirim paket hemat mulai dari 10kg")</arg>
 <arg>Kirim paket hemat mulai dari 10kg</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.709618" elapsed="0.100595"/>
+<status status="PASS" start="2025-06-20T15:46:31.210670" elapsed="0.109067"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.812228" level="INFO">Verifying element 'android=new UiSelector().text("Rp30.000").instance(0)' contains text 'Rp30.000'.</msg>
+<msg time="2025-06-20T15:46:31.319737" level="INFO">Verifying element 'android=new UiSelector().text("Rp30.000").instance(0)' contains text 'Rp30.000'.</msg>
 <arg>android=new UiSelector().text("Rp30.000").instance(0)</arg>
 <arg>Rp30.000</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.810213" elapsed="0.091996"/>
+<status status="PASS" start="2025-06-20T15:46:31.319737" elapsed="0.075908"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:49.634570" elapsed="0.267639"/>
+<status status="PASS" start="2025-06-20T15:46:31.140165" elapsed="0.255480"/>
 </kw>
 <kw name="and User see shipping services OTOPACK150" owner="android_keywords">
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.906316" level="INFO">Verifying element 'android=new UiSelector().text("4-6 Hari").instance(0)' contains text '4-6 Hari'.</msg>
+<msg time="2025-06-20T15:46:31.397153" level="INFO">Verifying element 'android=new UiSelector().text("4-6 Hari").instance(0)' contains text '4-6 Hari'.</msg>
 <arg>android=new UiSelector().text("4-6 Hari").instance(0)</arg>
 <arg>4-6 Hari</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.905440" elapsed="0.087021"/>
+<status status="PASS" start="2025-06-20T15:46:31.397153" elapsed="0.095548"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:49.992965" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman motor dibawah 150 cc")' contains text 'Pengiriman motor dibawah 150 cc'.</msg>
+<msg time="2025-06-20T15:46:31.493206" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman motor dibawah 150 cc")' contains text 'Pengiriman motor dibawah 150 cc'.</msg>
 <arg>android=new UiSelector().text("Pengiriman motor dibawah 150 cc")</arg>
 <arg>Pengiriman motor dibawah 150 cc</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:49.992461" elapsed="0.088982"/>
+<status status="PASS" start="2025-06-20T15:46:31.493206" elapsed="0.094342"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:50.082443" level="INFO">Verifying element 'android=new UiSelector().text("Rp315.500")' contains text 'Rp315.500'.</msg>
+<msg time="2025-06-20T15:46:31.589530" level="INFO">Verifying element 'android=new UiSelector().text("Rp315.500")' contains text 'Rp315.500'.</msg>
 <arg>android=new UiSelector().text("Rp315.500")</arg>
 <arg>Rp315.500</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:50.081443" elapsed="0.088814"/>
+<status status="PASS" start="2025-06-20T15:46:31.589026" elapsed="0.095049"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:49.903783" elapsed="0.266978"/>
+<status status="PASS" start="2025-06-20T15:46:31.395645" elapsed="0.288430"/>
 </kw>
 <kw name="and User see shipping services OTOPACK250" owner="android_keywords">
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:50.173269" level="INFO">Verifying element 'android=new UiSelector().text("4-6 Hari").instance(1)' contains text '4-6 Hari'.</msg>
+<msg time="2025-06-20T15:46:31.686448" level="INFO">Verifying element 'android=new UiSelector().text("4-6 Hari").instance(1)' contains text '4-6 Hari'.</msg>
 <arg>android=new UiSelector().text("4-6 Hari").instance(1)</arg>
 <arg>4-6 Hari</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:50.170761" elapsed="0.113591"/>
+<status status="PASS" start="2025-06-20T15:46:31.684075" elapsed="0.066124"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:50.285852" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman motor 150cc sampai 250cc")' contains text 'Pengiriman motor 150cc sampai 250cc'.</msg>
+<msg time="2025-06-20T15:46:31.751705" level="INFO">Verifying element 'android=new UiSelector().text("Pengiriman motor 150cc sampai 250cc")' contains text 'Pengiriman motor 150cc sampai 250cc'.</msg>
 <arg>android=new UiSelector().text("Pengiriman motor 150cc sampai 250cc")</arg>
 <arg>Pengiriman motor 150cc sampai 250cc</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:50.284352" elapsed="0.091311"/>
+<status status="PASS" start="2025-06-20T15:46:31.750199" elapsed="0.096192"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:30:50.377170" level="INFO">Verifying element 'android=new UiSelector().text("Rp438.500")' contains text 'Rp438.500'.</msg>
+<msg time="2025-06-20T15:46:31.847678" level="INFO">Verifying element 'android=new UiSelector().text("Rp438.500")' contains text 'Rp438.500'.</msg>
 <arg>android=new UiSelector().text("Rp438.500")</arg>
 <arg>Rp438.500</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:30:50.375663" elapsed="0.088922"/>
+<status status="PASS" start="2025-06-20T15:46:31.846391" elapsed="0.081612"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:50.170761" elapsed="0.293824"/>
+<status status="PASS" start="2025-06-20T15:46:31.684075" elapsed="0.243928"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:16.070240" elapsed="34.394345"/>
+<status status="PASS" start="2025-06-20T15:45:57.760309" elapsed="34.168695"/>
 </test>
 <test id="s1-t2" name="User input non-existent address" line="18">
 <kw name="Given Open LionParcel App" owner="android_keywords">
@@ -343,15 +343,15 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-06-20T15:30:50.465592" elapsed="7.560215"/>
+<status status="PASS" start="2025-06-20T15:46:31.929506" elapsed="7.271484"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-20T15:31:01.025962" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-06-20T15:46:42.201314" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-20T15:30:58.025807" elapsed="3.000155"/>
+<status status="PASS" start="2025-06-20T15:46:39.200990" elapsed="3.000324"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:50.465592" elapsed="10.560370"/>
+<status status="PASS" start="2025-06-20T15:46:31.929506" elapsed="10.271808"/>
 </kw>
 <kw name="When User input non-existent address" owner="android_keywords">
 <kw name="Swipe" owner="AppiumLibrary">
@@ -361,61 +361,61 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 <arg>1600</arg>
 <arg>1000</arg>
 <doc>Swipe from one point to another point, for an optional duration.</doc>
-<status status="PASS" start="2025-06-20T15:31:01.025962" elapsed="1.303160"/>
+<status status="PASS" start="2025-06-20T15:46:42.202013" elapsed="1.315156"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")</arg>
 <arg>15s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:31:02.329122" elapsed="0.820102"/>
+<status status="PASS" start="2025-06-20T15:46:43.517169" elapsed="1.016352"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:31:03.150727" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")'.</msg>
+<msg time="2025-06-20T15:46:44.535423" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")'.</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtOriginAddress")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:31:03.149224" elapsed="0.173152"/>
+<status status="PASS" start="2025-06-20T15:46:44.534289" elapsed="0.197202"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <arg>10s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" start="2025-06-20T15:31:03.322376" elapsed="1.459167"/>
+<status status="PASS" start="2025-06-20T15:46:44.732492" elapsed="1.497065"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-06-20T15:31:04.783047" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'.</msg>
+<msg time="2025-06-20T15:46:46.232062" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'.</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:31:04.781543" elapsed="1.399428"/>
+<status status="PASS" start="2025-06-20T15:46:46.229557" elapsed="0.630223"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:31:06.181476" level="INFO">Typing text 'lorem ipsum dolor sit amet' into text field 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'</msg>
+<msg time="2025-06-20T15:46:46.861801" level="INFO">Typing text 'lorem ipsum dolor sit amet' into text field 'android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")'</msg>
 <arg>android=new UiSelector().resourceId("com.lionparcel.services.consumer:id/edtRouteSearch")</arg>
 <arg>lorem ipsum dolor sit amet</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-06-20T15:31:06.180971" elapsed="0.856709"/>
+<status status="PASS" start="2025-06-20T15:46:46.859780" elapsed="1.651568"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:31:01.025962" elapsed="6.012718"/>
+<status status="PASS" start="2025-06-20T15:46:42.202013" elapsed="6.309335"/>
 </kw>
 <kw name="Then User should see error message Lokasi tidak ditemukan" owner="android_keywords">
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:31:07.041194" level="INFO">Verifying element 'android=new UiSelector().text("Lokasi tidak ditemukan")' contains text 'Lokasi tidak ditemukan'.</msg>
+<msg time="2025-06-20T15:46:48.514378" level="INFO">Verifying element 'android=new UiSelector().text("Lokasi tidak ditemukan")' contains text 'Lokasi tidak ditemukan'.</msg>
 <arg>android=new UiSelector().text("Lokasi tidak ditemukan")</arg>
 <arg>Lokasi tidak ditemukan</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:31:07.039682" elapsed="0.843816"/>
+<status status="PASS" start="2025-06-20T15:46:48.513370" elapsed="0.820124"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-06-20T15:31:07.884495" level="INFO">Verifying element 'android=new UiSelector().text("Lokasi yang kamu masukkan tidak ada dalam daftar")' contains text 'Lokasi yang kamu masukkan tidak ada dalam daftar'.</msg>
+<msg time="2025-06-20T15:46:49.334588" level="INFO">Verifying element 'android=new UiSelector().text("Lokasi yang kamu masukkan tidak ada dalam daftar")' contains text 'Lokasi yang kamu masukkan tidak ada dalam daftar'.</msg>
 <arg>android=new UiSelector().text("Lokasi yang kamu masukkan tidak ada dalam daftar")</arg>
 <arg>Lokasi yang kamu masukkan tidak ada dalam daftar</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-06-20T15:31:07.883498" elapsed="0.057866"/>
+<status status="PASS" start="2025-06-20T15:46:49.333494" elapsed="0.056894"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:31:07.038680" elapsed="0.902684"/>
+<status status="PASS" start="2025-06-20T15:46:48.513370" elapsed="0.878010"/>
 </kw>
-<status status="PASS" start="2025-06-20T15:30:50.465592" elapsed="17.475772"/>
+<status status="PASS" start="2025-06-20T15:46:31.929004" elapsed="17.462376"/>
 </test>
-<status status="PASS" start="2025-06-20T15:30:15.605105" elapsed="52.339583"/>
+<status status="PASS" start="2025-06-20T15:45:57.240907" elapsed="52.150473"/>
 </suite>
 <statistics>
 <total>
